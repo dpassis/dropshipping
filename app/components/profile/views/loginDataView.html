@@ -1,0 +1,72 @@
+<form name="loginDataFormEmail" style="margin-left: 400px;" autocomplete="off" novalidate>
+    <header>
+        <h3 data-i18n="pfl.loginDataForm_formTitle"></h3>
+    </header>
+    <br>
+    <table style="width:50%">
+        <tr>
+            <h4 data-i18n="pfl.loginDataForm_formSubTitleEmail"></h4>
+        </tr>
+        <tr>
+            <td>
+                <input style="background: white" ng-model="loginData.email" id="email" type="email" readonly required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input data-i18n-attr="{placeholder: 'pfl.loginDataForm_newEmail'}" style="background: white" ng-model="loginData.newEmail"
+                    id="newEmail" autocomplete="nope" type="email" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input data-i18n-attr="{placeholder: 'pfl.loginDataForm_oldPassword'}" ng-model="loginData.oldPassword" id="old-password"
+                    type="password" required>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center" colspan="2">
+                <save-data-button data-i18n-attr="{nome: 'pfl.loginDataForm_buttonText'}" acao="updateUserEmail()" ng-disabled="loginDataFormEmail_$invalid">
+                </save-data-button>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+  
+</form>
+<form name="loginDataFormPswd" style="margin-left: 400px;" autocomplete="off" novalidate>
+    
+        <tr>
+            <td>
+                <h4 data-i18n="pfl.loginDataForm_formSubTitlePswd"></h4>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input data-i18n-attr="{placeholder: 'pfl.loginDataForm_newPassword'}" ng-model="loginData.newPassword" id="new-password"
+                    type="password" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input data-i18n-attr="{placeholder: 'pfl.loginDataForm_confNewPassword'}" ng-model="loginData.confNewPassword" id="conf-new-password"
+                    type="password" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="text-align: center" colspan="2">
+                <save-data-button data-i18n-attr="{nome: 'pfl.loginDataForm_buttonText'}" acao="updateUserPswd()" ng-disabled="loginDataForm_$invalid">
+                </save-data-button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p ng-if="succesWriteUserData" class="alert alert-danger" data-i18n='{{ error }}'></p>
+            </td>
+        </tr>
+    </table>
+</form>

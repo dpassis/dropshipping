@@ -1,0 +1,35 @@
+{
+        "navbar_homeButton" : "Home",
+        "navbar_newsButton" : "Notícias",
+        "navbar_createAccountButton" : "Criar uma Conta",
+        "navbar_loginButton": "Login",
+        "navbar_profileButton": "Perfil",
+        "navbar_logoutButton": "Sair",
+
+        "footer_dropshipping_about" : "Sobre",
+        "footer_dropshipping_login": "Login",
+        "footer_dropshipping_createAccount": "Criar uma conta",
+        "footer_dropshipping_termsOfUse": "Termos de uso",
+        "footer_dropshipping_privacyPolicy": "Política de privacidade",
+        "footer_dropshipping_contact": "Fale Conosco",
+
+        "footer_help_helpTitle": "Ajuda",
+        "footer_help_security" : "Dropshipping é seguro?",
+        "footer_help_frequentlyQuestions" : "Perguntas frequentes",
+        "footer_help_forBusinesses": "Para Empresas",
+
+        "footer_language_languageTitle":  "Idioma",
+        "footer_language_portuguese" : "Português",
+        "footer_language_english": "Inglês",
+        "footer_language_spanish": "Espanhol",
+
+        "menu_profile_profileTitle":  "Minha Conta",
+        "menu_profile": "Perfil",
+        "menu_loginData": "Dados de Login",
+        "menu_personalData" : "Dados Pessoais",
+        "menu_timeline" : "Timeline",
+        "menu_signOut": "Sair",
+
+        "home_mainSearchPlaceholder": "Buscar pelo prédio, condomínio ou endereço",
+        "home_mainSearchLabel": "Mais de 1.000 lugares avaliados"
+}

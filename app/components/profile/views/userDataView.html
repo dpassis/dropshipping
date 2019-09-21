@@ -1,0 +1,80 @@
+<!-- Start Content -->
+<div id="content">
+    <div class="container">
+      <div class="row">
+        <!-- Sidebar View Content -->
+        <menu-bar ng-if="user.loggedIn"></menu-bar>
+        <!-- Sidebar View Content -->
+        <div class="col-sm-9 page-content">
+          <div class="inner-box">
+            <div id="accordion" class="panel-group">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title"> <a href="#collapseB1" data-toggle="collapse" data-i18n="pfl.userDataForm_formTitle"></a> </h4>
+                </div>
+                <div class="panel-collapse collapse in" id="collapseB1">
+                  <div class="panel-body">
+                    <form role="form">
+                      <div class="form-group">
+                        <label class="control-label" data-i18n="pfl.userDataForm_firstName"></label>
+                        <input ng-model="userData.firstName" class="form-control" id="firstName" type="text">
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label" data-i18n="pfl.userDataForm_lastName"></label>
+                        <input class="form-control" ng-model="userData.lastName" id="lastName" type="text">
+                      </div>
+                        <div class="form-group">
+                                <select ng-model="userData.gender" class="form-control" id="gender">
+                                    <option value="" data-i18n="pfl.userDataForm_gender"></option>
+                                    <option data-i18n-attr="{value: 'pfl.userDataForm_male'}" data-i18n="pfl.userDataForm_male"></option>
+                                    <option data-i18n-attr="{value: 'pfl.userDataForm_female'}" data-i18n="pfl.userDataForm_female"></option>
+                                </select>
+                        </div>
+                      <div class="form-group">
+                        <label class="control-label" data-i18n="pfl.userDataForm_birthday"></label>
+                        <input class="form-control" ng-model="userData.birthday" id="birthday" type="text">
+                      </div>
+                      <hr style=" border-color:#aaa;box-sizing:border-box;width:100%; "/> <h3>Endereço</h3><hr style=" border-color:#aaa;box-sizing:border-box;width:100%; "/>
+                      <div class="form-group">
+                        <label class="control-label" data-i18n="pfl.userDataForm_zipcode"></label>
+                        <input ng-model="userData.zipcode" ng-blur="getCep()" class="form-control" id="zipcode" type="text">
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label" data-i18n="pfl.userDataForm_street"></label>
+                        <input ng-model="userData.street" class="form-control" id="street" type="text">
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label" data-i18n="pfl.userDataForm_housenumber"></label>
+                        <input ng-model="userData.housenumber" class="form-control" id="housenumber" type="text">
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label" data-i18n="pfl.userDataForm_add_address_data"></label>
+                        <input ng-model="userData.add_address_data" class="form-control" id="add_address_data" type="text">
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label" data-i18n="pfl.userDataForm_district"></label>
+                        <input ng-model="userData.district" class="form-control" id="district" type="text">
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label" data-i18n="pfl.userDataForm_city"></label>
+                        <input ng-model="userData.city" class="form-control" id="city" type="text">
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label" data-i18n="pfl.userDataForm_state"></label>
+                        <input ng-model="userData.state" class="form-control" id="state" type="text">
+                      </div>
+                      <div class="form-group">
+                        <save-data-button data-i18n-attr="{nome: 'pfl.userDataForm_buttonText'}" acao="writeUserData()" ng-disabled="userDataForm_$invalid">
+                        </save-data-button>
+                        <p ng-if="succesWriteUserData">
+                            <i class="fa fa-times"></i> <span ng-if="succesWriteUserData" class="alert alert-danger" data-i18n='{{ error }}'> </span>
+                        </p>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+      </div>  
+    </div>      
+  </div>
+  <!-- End Content -->
