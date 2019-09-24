@@ -48,10 +48,11 @@ angular.module('dropshipping.sharedDirective',[])
 	
 		ddo.scope = {
 			nome: '@', //@ é uma string, sempre uma copia de valor
-			acao: '&'//,//& avalia expressão dentro do contexto do controller
+			acao: '&',//,//& avalia expressão dentro do contexto do controller
+			disabled: '&' 
 		};
 	
-		ddo.template = '<button type="submit" ng-click="acao()" class="btn btn-common log-btn">{{nome}}</button>';
+		ddo.template = '<button type="submit" ng-click="acao()" ng-disabled="disabled" class="btn btn-common log-btn">{{nome}}</button>';
 	
 		return ddo;
 })

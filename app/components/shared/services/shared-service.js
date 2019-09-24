@@ -129,7 +129,27 @@ app.factory("ErrorMessage",function(){
                     default:
                         return 'auth.pswdResetForm_errorMessage_unknownError';
                 }
-            }
+            },
+
+            /**
+             * @author dpassis
+             * @description Function to retrieve a error message when validates ZipCode
+             * @param errorCode
+             * @returns a message error base in a passed errorCode
+             */
+            getErrorMessageZipCodeValidation :  function(errorCode){
+        
+                switch(errorCode) {
+                    case 'auth/invalid-email':
+                        return  'auth.pswdResetForm_errorMessage_invalidEmail';
+                        break;
+                    case 'auth/user-not-found':
+                        return  'auth.pswdResetForm_errorMessage_userNotFound';
+                        break;
+                    default:
+                        return 'auth.pswdResetForm_errorMessage_unknownError';
+                }
+            },
         }
 
     });

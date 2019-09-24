@@ -31,8 +31,7 @@
                     <input data-i18n-attr="{placeholder: 'auth.loginUserForm_password'}" ng-model="password" id="password" type="password" class="form-control" required>
                   </div>
                 </div>                  
-               <save-data-button data-i18n-attr="{nome: 'auth.loginUserForm_buttonText'}" acao="signIn()" ng-disabled="authForm.$invalid">
-			</save-data-button>
+      <button  data-i18n="auth.loginUserForm_buttonText"  type="submit" ng-click="signIn()" ng-disabled="authForm.$invalid" class="btn btn-common log-btn"></button>
               </form>
               <ul class="form-links">
                 <li class="pull-left">
